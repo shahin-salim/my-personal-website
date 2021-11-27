@@ -117,6 +117,13 @@ function Messege() {
      }
 }
 
+function beforeMessege(){
+     beforeSubject()
+     if(showError(3, subject, "fill this field") == true){
+          Subject()
+     }
+}
+
 $("#submit-form").submit((e) => {
      e.preventDefault();
 
