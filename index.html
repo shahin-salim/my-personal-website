@@ -524,7 +524,7 @@
                               <!-- Secondary Alert -->
 
                               <div class="err"> </div>
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" oninput="Name()" autocomplete="off">
 
                             </div>
                           </div>
@@ -533,17 +533,30 @@
 
                               <!-- Secondary Alert -->
                               <div class="err"> </div>
-                              <input type="text" class="form-control" name="email" id="email" placeholder="Your Email">
+                              <input type="text" class="form-control" name="email" id="email" placeholder="Your Email" onclick="beforeEmail()" autocomplete="off" oninput="Email()">
 
                             </div>
                           </div>
+
+
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+
+                              <!-- Secondary Alert -->
+                              <div class="err"> </div>
+                              <input type="text" class="form-control" name="number" id="number" placeholder="Your number" onclick="beforeNumber()" oninput="Number()" autocomplete="off">
+
+                            </div>
+                          </div>
+
+
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
 
 
                               <!-- Secondary Alert -->
                               <div class="err"> </div>
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" oninput="Subject()" onclick="beforeSubject()" autocomplete="off">
                             </div>
                           </div>
                           <div class="col-md-12">
@@ -551,9 +564,9 @@
 
 
                               <!-- Secondary Alert -->
-                              <div class="err"> </div>
+                              <div class="err"></div>
                               <textarea class="form-control" name="message" rows="5" placeholder="Message"
-                                id="message"></textarea>
+                                id="message" oninput="Messege()" onclick="beforeMessege()"></textarea>
 
                             </div>
                           </div>

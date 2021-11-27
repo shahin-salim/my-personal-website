@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="form">
+        <!-- <input type="text" name="" id="name" oninput="fun()">
+        <span id="span" style="width: 50px;height: 50px;background-color: yellow;"></span> -->
+        <input type="text" name="" id="email" oninput="Email()" >
+        <button type="submit" id="btn">submit</button>
+    </form>
+
+    <script>
+
+    console.log("ksdbh")
+    var reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    var num = /[1-4]/g  
+
+    function Email(){
+        val = document.getElementById("email").value
+        if(reg.test(val)){
+            console.log("true")
+        }else{
+            console.log("fales")
+        }
+    }
+//number validation not working check that 
+
+
+    </script>
+</body>
+
+</html>
+
+<!-- 
+// function fun() {
+    //     var reg = /^[a-zA-Z]*$/
+    //     var a = document.getElementById("name").value
+    //     var f = document.getElementById("btn")
+    //     var span = document.getElementById("span")
+//
+    //     if (reg.test(a) == true) {
+    //         console.log("string only contains letters");
+    //         span.innerHTML = "skdjf"
+    //     }else{
+    //         a = a.substring(0, a.length - 1);
+    //         console.log(a)
+    //         document.getElementById("name").value = a
+    //         span.inn
+    //     }
+//
+    // } -->
