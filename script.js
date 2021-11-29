@@ -18,7 +18,7 @@ function showError(index, id, message) {
      if (id.value.trim() == "") {
           errDiv[index].innerHTML = ` <div class="alert alert-secondary alert-dismissible fade show">
           <strong>${message}!</strong> 
-          <button type="button" class="btn-close" data-bs-dismiss="alert" onclick="onclickHide()></button>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" ></button>
            </div>`;
           return false;
      } else {
