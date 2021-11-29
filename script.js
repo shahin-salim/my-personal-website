@@ -158,4 +158,9 @@ $("#submit-form").submit((e) => {
 });
 
 
+function hideErrDiv(a){
+     errDiv[a].innerHTML = ""
+}
+
+
 
