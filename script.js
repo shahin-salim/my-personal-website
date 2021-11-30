@@ -1,9 +1,9 @@
 let id = (id) => document.getElementById(id);
 let cls = (cls) => document.getElementsByClassName(cls);
-var onlyChar = /^[A-Za-z]+$/;
+var onlyChar = /^[a-zA-Z\s]*$/;
 var emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var numberReg = /^\d+$/;
-
+var countn = 0;
 var shahin = 0;
 
 const form = id("submit-form"),
@@ -16,7 +16,7 @@ const form = id("submit-form"),
 
 function showError(index, id, message) {
      if (id.value.trim() == "") {
-          errDiv[index].innerHTML = ` <div class="alert alert-secondary alert-dismissible fade show">
+          errDiv[index].innerHTML = `<div class="alert alert-warning alert-dismissible fade show">
           <strong>${message}!</strong> 
           <button type="button" class="btn-close" data-bs-dismiss="alert" ></button>
            </div>`;
@@ -46,7 +46,7 @@ function Name() {
 }
 
 function errorMessege(index, message) {
-     errDiv[index].innerHTML = ` <div class="alert alert-secondary alert-dismissible fade show">
+     errDiv[index].innerHTML = ` <div class="alert alert-warning alert-dismissible fade show">
                <strong>${message}!</strong> 
                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                 </div>`;
@@ -117,10 +117,10 @@ function Messege() {
      }
 }
 
-function beforeMessege(){
-     beforeSubject()
-     if(showError(3, subject, "fill this field") == true){
-          Subject()
+function beforeMessege() {
+     beforeSubject();
+     if (showError(3, subject, "fill this field") == true) {
+          Subject();
      }
 }
 
@@ -157,10 +157,6 @@ $("#submit-form").submit((e) => {
      }
 });
 
-
-function hideErrDiv(a){
-     errDiv[a].innerHTML = ""
+function hideErrDiv(a) {
+     errDiv[a].innerHTML = "";
 }
-
-
-
